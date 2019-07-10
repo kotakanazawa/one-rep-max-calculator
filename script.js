@@ -1,12 +1,9 @@
 (function () {
   'use strict';
-
   const useWeight = document.getElementById('use-weight');
   const reps = document.getElementById('reps');
   const calculateButton = document.getElementById('calculate');
   const resultDivided = document.getElementById('resultDivided');
-  const ary = [];
-  const rmPercent = [0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95];
 
   // 子要素がある限り削除
   function removeAllChildren(element) {
@@ -25,16 +22,17 @@
     // 1RM = w * (36/(37-r));
     const oneRepMax = Math.floor(weight * (1 + rep/40));
     
-    // 95~60%RMの計算
+    // 60~95%RMの計算
+    let ary = [];
     for (var i = 0.6; i <= 1; i = i + 0.05) {
       const result = Math.floor((i * oneRepMax)); 
       ary.push(result);
     }
 
-    var list = [];
-    for(var i = 60, y = 0; i < 100; i = i + 5, y++) {
-      list.push(`<li>${i}%RM: ${ary[y]}</li>`);
-    } 
+    let list = [];
+    for (var i = 60, y = 0; i < 100; i = i + 5, y++) {
+      list.push(`<li>${i}%RM: ${ary[y]}kg</li>`);
+    }
 
     // 計算結果表示
     removeAllChildren(resultDivided);
@@ -49,6 +47,8 @@
     resultDivided.appendChild(header);
     resultDivided.appendChild(paragraphWeight);
     resultDivided.appendChild(paragraphRMs);
+    }
   }
-}
+
+  useWeight.focus();
 })();
