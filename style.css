@@ -16,7 +16,7 @@ img {
   max-width: 100%;
 }
 /* a {
-  text-decoration: none;
+text-decoration: none;
 } */
 
 /* コンテンツ
@@ -63,6 +63,7 @@ img {
   color: #fff;
   border-radius: 5px;
   padding: 10px 20px;
+  margin-top: 20px;
 }
 #calculate:hover {
   background: #0090aa;
@@ -73,12 +74,11 @@ img {
 
 /* 結果表示
 ------------------------------- */
-#resultDivided {
-  
-}
 .result-h2 {
   text-align: center;
   font-size: 4.0rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .result-ul {
   display: flex;
@@ -87,12 +87,12 @@ img {
   justify-content: baseline;
 }
 .result-ul li {
+  width: 250px;
   padding: 10px 50px;
-  margin: 5px;
+  /* margin: 5px; */
   font-size: 3.0rem;
   display: inline-block;
 }
-.result-ul:nth-child(odd) {
-  margin-right: 100px;
-  display: inline-block;
+.result-ul li:nth-child(odd) {
+  margin-right: 50px;
 }
