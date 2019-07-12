@@ -4,6 +4,7 @@
   const reps = document.getElementById('reps');
   const calculateButton = document.getElementById('calculate');
   const resultDivided = document.getElementById('resultDivided');
+  const resultUl = document.getElementById('result-ul');
 
   // 子要素がある限り削除
   function removeAllChildren(element) {
@@ -29,6 +30,7 @@
       ary.push(result);
     }
 
+    // 60~95%RMの計算結果を配列に代入
     let list = [];
     for (var i = 60, y = 0; i < 100; i = i + 5, y++) {
       list.push(`<li>${i}%RM: ${ary[y]}kg</li>`);
@@ -36,15 +38,14 @@
 
     // 計算結果表示
     removeAllChildren(resultDivided);
-    const header = document.createElement('h2');
-    const paragraphWeight = document.createElement('p');
-    const paragraphRMs = document.createElement('p');
+    const paragraphWeight = document.createElement('h2');
+    const paragraphRMs = document.createElement('ul');
 
-    header.innerText = '結果';
-    paragraphWeight.innerText = `1RM(100%RM):${oneRepMax}kg`;
+    paragraphWeight.classList.add('result-h2');
+    paragraphRMs.classList.add('result-ul');
+    paragraphWeight.innerText = `あなたのマックス重量：${oneRepMax}kg`;
     paragraphRMs.innerHTML = list.join('');
-
-    resultDivided.appendChild(header);
+    
     resultDivided.appendChild(paragraphWeight);
     resultDivided.appendChild(paragraphRMs);
     }

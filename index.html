@@ -11,15 +11,21 @@
 </head>
 
 <body>
-  <main>
-    <h1>筋力計算アプリ</h1>
-    <p>あなたの使用重量を入力してください</p>
-    重量：<input type="text" id="use-weight"> kg
-    <p>その時できた回数（レップ数）を入力してください</p>
-    回数：<input type="text" id="reps"> 回<br>
-    <p><button id="calculate">計算する</button></p>
-    <div id="resultDivided"></div>
-  </main>
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="site-title">One-Rep Calculator</h1>
+      <p class="site-title-sub">あなたの最大筋力を計算します</p>
+    </header>
+    <section class="calc">
+      <p class="calc-use">使用重量と回数を入力してください</p>
+      <span class="section-words">重量(kg)：</span><input type="text" id="use-weight" placeholder="100">
+      <span class="section-words">回数：</span><input type="number" id="reps"placeholder="10"><br>
+      <p><button id="calculate">計算する</button></p>
+    </section> 
+      <div id="resultDivided"></div>
+      <!-- <ul id="result-ul"></ul> -->
+    </section>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

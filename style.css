@@ -1,18 +1,98 @@
 @charset "UTF-8";
 
+/* 共通部分
+------------------------------- */
 html {
-  font-size: 100%;
+  font-size: 62.5%;
 }
 body{
+  background: #151515 url('/img/top.jpg') no-repeat fixed;
+  background-size: cover;
   font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
-  /* line-height: 1.7; */
-  background-color: #fafafa;
-  color: #333333;
+  font-size: 1.4rem;
+  color: #151515;
+}
+img {
+  max-width: 100%;
+}
+/* a {
+  text-decoration: none;
+} */
+
+/* コンテンツ
+------------------------------- */
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color:rgba(255,255,255,0.8);
+  padding: 10px 30px;
+  margin-top: 40px;
+  /* border-radius: 5px; */
+}
+.site-title {
+  font-size: 4.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.site-title-sub {
+  margin-top: -30px;
+  font-size: 2.2rem;
+  letter-spacing: 1px;  
+  text-align: center;
+}
+.calc {
+  text-align: center;
+  padding-top: 5px;
+}
+.calc-use {
+  font-size: 2.2rem;
+}
+.section-words {
+  font-size: 1.5rem;
+}
+#use-weight {
+  margin-right: 30px;
+}
+#use-weight, #reps {
+  font-size: 2.0rem;
+  padding: 5px;
+}
+#calculate {
+  font-size: 1.375rem;
+  background: #0bd;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+#calculate:hover {
+  background: #0090aa;
+}
+#calculate:focus{
+  outline: none;
 }
 
-
-main {
-  /* display: block; */
-  width: 600px;
-  margin: 0 auto;
+/* 結果表示
+------------------------------- */
+#resultDivided {
+  
+}
+.result-h2 {
+  text-align: center;
+  font-size: 4.0rem;
+}
+.result-ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: baseline;
+}
+.result-ul li {
+  padding: 10px 50px;
+  margin: 5px;
+  font-size: 3.0rem;
+  display: inline-block;
+}
+.result-ul:nth-child(odd) {
+  margin-right: 100px;
+  display: inline-block;
 }
